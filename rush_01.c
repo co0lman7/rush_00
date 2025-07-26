@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rush_01.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arlind.hajdari <arlind.hajdari@student.    +#+  +:+       +#+        */
+/*   By: arlindhajdari <arlindhajdari@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 23:32:06 by arlind.hajd       #+#    #+#             */
-/*   Updated: 2025/07/26 03:14:43 by arlind.hajd      ###   ########.fr       */
+/*   Updated: 2025/07/26 13:47:12 by arlindhajda      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/***\  
-*   *  
-\***/  
+/***\
+*   *
+\***/
 
 /*
 (1,1)(1,2)(1,3)(1,4)
@@ -28,28 +28,25 @@ void    ft_putchar(char c)
 void rush01(int x, int y)
 {
     int col;
+
     col=1;
 
     int row;
-
     if(x<1 || y<1)
     {
         return;
     }
-
     else{
         while (col<=y)
         {
             row=1;
             while(row<=x)
             {
-            if((row==1 && col==1) || (row==x && col==y) && (!(row ==1 && col == y))) //need to check here because row == x == 1 makes the second condition true, and outputs /***/ instead of /****\      */
+            if((row==1 && col==1) || (row==x && col==y) && (!(row ==1 && col == y) && (!(row ==x && col == 1)))) //issue fixed by adding the last condition check, needs to be checked with norminette
                 {
                     ft_putchar('/');
-
                 }
-
-            else if ((row==1 && col==y)|| (row==x && col==1) || (row ==x && col == y))
+            else if ((row==1 && col==y)|| (row==x && col==1))
             {
                 ft_putchar('\\');
             }
@@ -68,6 +65,8 @@ void rush01(int x, int y)
         }
     }
 }
+
+
 int main()
 {
     rush01(10,15);
