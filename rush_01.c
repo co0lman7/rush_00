@@ -6,7 +6,7 @@
 /*   By: arlindhajdari <arlindhajdari@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 23:32:06 by arlind.hajd       #+#    #+#             */
-/*   Updated: 2025/07/26 13:47:12 by arlindhajda      ###   ########.fr       */
+/*   Updated: 2025/07/26 22:00:58 by arlindhajda      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,7 @@ int main()
     rush01(1,2);
     write(1, "\n", 1);
     rush01(1,5);
+    write(1, "\n", 1);
+    rush01(4,4);
     write(1, "\n", 1);
 }
