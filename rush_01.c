@@ -6,7 +6,7 @@
 /*   By: arlind.hajdari <arlind.hajdari@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 23:32:06 by arlind.hajd       #+#    #+#             */
-/*   Updated: 2025/07/26 03:10:33 by arlind.hajd      ###   ########.fr       */
+/*   Updated: 2025/07/26 03:14:43 by arlind.hajd      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void rush01(int x, int y)
             row=1;
             while(row<=x)
             {
-            if((row==1 && col==1) || (row==x && col==y) && (!(row ==1 && col == y)))
+            if((row==1 && col==1) || (row==x && col==y) && (!(row ==1 && col == y))) //need to check here because row == x == 1 makes the second condition true, and outputs /***/ instead of /****\      */
                 {
                     ft_putchar('/');
 
